@@ -5,7 +5,7 @@ This project involves developing REST APIs using Django for an AI chat system. T
 ## Features
 
 - **User Registration**: Allows users to register with the chat system by providing a unique username and password. Upon successful registration, users are assigned 4000 tokens to their account.
-- **User Login**: Enables users to log in to the chat system using their username and password. Upon successful login, users receive an authentication token for subsequent API calls.
+- **User Login**: Enables users to log in to the chat system using their email and password. Upon successful login, users receive an authentication token for subsequent API calls.
 - **Chat Interaction**: Provides an endpoint for users to send messages and receive AI-generated responses. Each question deducts 100 tokens from the user's account.
 - **Token Balance Check**: Allows users to check their token balance by providing their authentication token.
 
@@ -36,4 +36,4 @@ User Registration: http://localhost:8000/register/
 User Login: http://localhost:8000/login/
 Chat Interaction: http://localhost:8000/chat/
 Token Balance Check: http://localhost:8000/balance/
-Use appropriate HTTP methods (POST, GET) and provide necessary parameters as described in the API documentation.
+
