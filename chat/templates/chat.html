@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="chat">
+    <h2>Chat Interaction({{ user.username }})</h2>
+    {% if message %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" disabled><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <h3>{{ message }}</h3>
+    {% else %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" required><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+    {% endif %}
+    <h3>Chat History:</h3>
+    {% if chat_history %}
+    <ul>
+        {% for chat in chat_history %}
+            <li>
+                <h6>Message:
+                {{ chat.message }} </h6>
+                <h6>Response:{{chat.response}} </h6>
+                </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock content %}

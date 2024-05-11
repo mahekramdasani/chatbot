@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="login">
+        <h2>Registration</h2>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    {% if errors %}
+        <ul>
+            {% for field, error_msgs in errors.items %}
+                {% for error_msg in error_msgs %}
+                    <li>{{ error_msg }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Register</button>
+    </form>
+    </div>
+{% endblock content %}
+
