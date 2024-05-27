@@ -13,7 +13,7 @@ This project involves developing REST APIs using Django for an AI chat system. T
 
 1. Clone the repository to your local machine:
 
-   git clone https://github.com/your-username/ai-chat-system.git
+   git clone https://github.com/mahekramdasani/chatbot.git
 
 2. Navigate to the project directory:
 
